@@ -15,7 +15,7 @@ pre: " <b> 4.3. </b> "
 ### Event Purpose
 
 * Provide comprehensive and systematic knowledge about security on AWS based on the 5 Security Pillars of AWS Well-Architected Framework
-* Build security-first mindset, considering security as the foundation from the architecture design phase, not an afterthought
+* Build security-first mindset, considering security as the foundation from the architecture design phase, not an afterthought.
 * Guide practical best practices on:
 * Introduce AI tools supporting development lifecycle
   * Identity & Access Management (IAM)
