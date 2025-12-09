@@ -36,7 +36,7 @@ Giải pháp giúp người dùng dễ dàng lưu trữ và chia sẻ hành trì
 ### 3. Kiến trúc giải pháp  
 Hệ thống Travel Journal Web được xây dựng hoàn toàn trên kiến trúc AWS Serverless, tối ưu hiệu năng, bảo mật và khả năng mở rộng. Giao diện web tĩnh được lưu trữ trên Amazon S3, phân phối toàn cầu qua Amazon CloudFront và bảo vệ bởi AWS WAF, ACM và Route 53. Người dùng xác thực thông qua Amazon Cognito, trong khi Amazon API Gateway kết hợp AWS Lambda đảm nhiệm xử lý nghiệp vụ phía máy chủ. Ảnh người dùng tải lên được lưu tại Amazon S3 và xử lý tự động qua hàng đợi Amazon SQS, AWS Lambda, Amazon Rekognition và Amazon Location Service. Kết quả được lưu trữ trong Amazon DynamoDB và phân phối lại qua S3. Hệ thống hỗ trợ cơ chế retry, DLQ, gửi thông báo bằng Amazon SNS, giám sát tập trung bằng Amazon CloudWatch và AWS X-Ray, đồng thời bảo mật dữ liệu bằng AWS IAM, KMS và Secrets Manager.
 
-![Travel journal Architecture](/images/travel_journal_architecture.jpg)
+![Travel journal Architecture](images/travel_journal_architecture.jpg)
 
 
 *Dịch vụ AWS sử dụng*  

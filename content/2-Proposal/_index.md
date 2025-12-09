@@ -37,7 +37,7 @@ The solution allows users to easily record and share their journeys while establ
 ### 3. Solution Architecture
 The Travel Journal Web is built entirely on an AWS Serverless architecture, optimizing performance, security, and scalability. The static web interface is hosted on Amazon S3, distributed globally through Amazon CloudFront, and protected by AWS WAF, ACM, and Route 53. User authentication is managed by Amazon Cognito, while Amazon API Gateway and AWS Lambda handle backend business logic. Uploaded images are stored in Amazon S3 and automatically processed through Amazon SQS, AWS Lambda, Amazon Rekognition, and Amazon Location Service. The results are stored in Amazon DynamoDB and redistributed via S3. The system supports retry and DLQ mechanisms, sends notifications through Amazon SNS, provides centralized monitoring with Amazon CloudWatch and AWS X-Ray, and secures data using AWS IAM, KMS, and Secrets Manager.. The architecture is detailed below:
 
-![Travel journal Architecture](/images/travel_journal_architecture.jpg)
+![Travel journal Architecture](images/travel_journal_architecture.jpg)
 
 
 ### AWS Services Used
