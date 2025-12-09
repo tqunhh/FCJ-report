@@ -8,8 +8,8 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with First Cloud Journey members.
-* Understand basic AWS services, how to use console & CLI.
+* Fix post update errors
+* Attend AWS Cloud Mastery Series #2 event    
 
 ### Tasks to be implemented this week:
 | Day | Tasks                                                                                                                                                                                   | Start Date | Completion Date | Resources                            |

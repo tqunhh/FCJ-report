@@ -7,8 +7,8 @@ pre: " <b> 1.12 </b> "
 ---
 ### Week 12 Objectives:
 
-* Connect and get acquainted with First Cloud Journey members.
-* Understand basic AWS services, how to use console & CLI.
+* Test Rekognition AI function with Backend team
+* Attend AWS Cloud Mastery Series #3 event 
 
 ### Tasks to be implemented this week:
 | Day | Tasks                                                                                                                                                                                   | Start Date | Completion Date | Resources                            |

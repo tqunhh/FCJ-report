@@ -6,6 +6,9 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
+{{% notice info %}}
+📄 **Tải xuống Bản đề xuất đầy đủ:** [Proposal Template.docx](/documents/Proposal%20Template.docx)
+{{% /notice %}}
 
 # Travel Journal
 ## Giải pháp AWS Serverless cho nhật ký du lịch

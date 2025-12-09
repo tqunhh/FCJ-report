@@ -6,6 +6,9 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
+{{% notice info %}}
+📄 **Download Full Proposal:** [Proposal Template.docx](/documents/Proposal%20Template.docx)
+{{% /notice %}}
 
 # Travel Journal
 ## A Unified AWS Serverless Solution for Travel Journal
