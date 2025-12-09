@@ -1,19 +1,61 @@
 ---
-title : "Giới thiệu"
-date :  "2025-01-01" 
-weight : 1
-chapter : false
-pre : " <b> 5.1. </b> "
+title: " Giới thiệu Workshop"
+weight: 1
 ---
 
-#### Giới thiệu về VPC Endpoint
 
-+ Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng.
-+ Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint  PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL.
+## **Giới thiệu**
 
-#### Tổng quan về workshop
-Trong workshop này, bạn sẽ sử dụng hai VPC.
-+ **"VPC Cloud"** dành cho các tài nguyên cloud như Gateway endpoint và EC2 instance để kiểm tra.
-+ **"VPC On-Prem"** mô phỏng môi trường truyền thống như nhà máy hoặc trung tâm dữ liệu của công ty. Một EC2 Instance chạy phần mềm StrongSwan VPN đã được triển khai trong "VPC On-prem" và được cấu hình tự động để thiết lập đường hầm VPN Site-to-Site với AWS Transit Gateway. VPN này mô phỏng kết nối từ một vị trí tại TTDL (on-prem) với AWS cloud. Để giảm thiểu chi phí, chỉ một phiên bản VPN được cung cấp để hỗ trợ workshop này. Khi lập kế hoạch kết nối VPN cho production workloads của bạn, AWS khuyên bạn nên sử dụng nhiều thiết bị VPN để có tính sẵn sàng cao.
+Workshop này trình bày tổng quan về **Travel Journal Web Application** được xây dựng trong dự án.  
+Mục tiêu chính là giúp người học nắm được quy trình thiết kế và triển khai một hệ thống web hiện đại dựa trên **kiến trúc serverless của AWS**, kết hợp các dịch vụ như **AWS Rekognition**, **AWS Location Service**, **DynamoDB**, và **Amazon S3** để tạo ra một sản phẩm thực tế, khả năng mở rộng cao và tối ưu chi phí.
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+Nền tảng cho phép người dùng ghi lại hành trình du lịch bằng cách đăng tải hình ảnh, ghi chú địa điểm, tạo bài viết và chia sẻ trải nghiệm cá nhân.  
+Khi ảnh được tải lên, **Amazon Rekognition** sẽ phân tích nội dung và tự động gắn nhãn.  
+Metadata của bài viết được lưu vào **DynamoDB**, hình ảnh được lưu trữ trong **S3**, và toàn bộ nội dung tĩnh được phân phối qua **CloudFront** để đảm bảo tốc độ truy cập nhanh.
+
+---
+
+
+## **Tính năng nổi bật – Hiển thị hành trình**
+
+Điểm nhấn của hệ thống là khả năng hiển thị hành trình di chuyển dựa trên vị trí của từng bài viết bằng **AWS Location Service**, mang lại góc nhìn trực quan và sinh động cho trải nghiệm người dùng.
+
+---
+
+## **Kiến trúc Backend Serverless**
+
+Backend sử dụng hoàn toàn kiến trúc serverless:
+
+- **AWS Lambda** – xử lý logic nghiệp vụ  
+- **API Gateway** – cung cấp REST API  
+- **DynamoDB** – lưu trữ dữ liệu bài viết và người dùng  
+- **Pipeline S3 + SQS + Lambda** – xử lý ảnh tải lên  
+- **Rekognition** – gắn nhãn tự động  
+- **CloudFront** – phân phối nội dung hiệu năng cao  
+
+Kiến trúc này giảm thiểu việc vận hành, tự động mở rộng theo tải và tiết kiệm chi phí.
+
+---
+
+
+## **Xây dựng Frontend**
+
+Frontend sử dụng React và được triển khai lên:
+  
+- **AWS CloudFront**
+
+giúp tối ưu hiệu năng và đơn giản hóa triển khai.
+
+---
+
+## **Mục tiêu Workshop**
+
+Sau workshop, người học sẽ hiểu rõ:
+
+- Cách kết hợp nhiều dịch vụ AWS để xây dựng hệ thống web hoàn chỉnh  
+- Cách hoạt động của kiến trúc serverless  
+- Cơ chế xử lý dữ liệu ảnh bằng AI Rekognition  
+- Quy trình triển khai, bảo mật và đánh giá hiệu năng hệ thống  
+
+---
+![Travel journal Architecture](/images/2-Proposal/proposal.jpg)

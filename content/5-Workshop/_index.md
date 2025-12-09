@@ -1,31 +1,33 @@
 ---
 title: "Workshop"
-date: "2025-01-01"
+date: 2025-01-01
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+
+# Building Travel Guide Application with AWS Serverless
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+This workshop guides you through building a complete **Travel Guide Application** using AWS Serverless services. You'll learn how to design, implement, and deploy a production-ready application with modern cloud architecture patterns.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+The application allows users to share travel experiences, upload photos, and discover destinations through an AI-powered gallery system.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+**Key Technologies:**
+- **Backend:** AWS Lambda, API Gateway, DynamoDB
+- **AI Processing:** Amazon Rekognition, SQS, SNS/SES
+- **Authentication:** Amazon Cognito, IAM
+- **Storage & CDN:** S3, CloudFront
+- **Infrastructure:** AWS SAM, CloudFormation
 
 #### Content
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+1. [Workshop Overview](5.1-workshop-overview/)
+2. [Infrastructure as Code & Multi-Stack Architecture](5.2-iac-multistack/)
+3. [Backend API & Articles Service](5.3-backend-articles/)
+4. [AI Image Processing Pipeline](5.4-image-processing/)
+5. [Authentication with Cognito & IAM](5.5-auth-cognito-iam/)
+6. [CloudFront CDN & Location Services](5.6-cloudfront-s3-location/)
+7. [Security Implementation](5.7-security/)
